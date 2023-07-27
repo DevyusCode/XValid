@@ -23,8 +23,24 @@ SOFTWARE.
 */
 
 namespace XValid;
+
+/// <summary>
+/// Provides methods to validate credit card numbers, including numeric check, Luhn algorithm, and supported card types.
+/// </summary>
 public static class CreditCardValidator
 {
+	/// <summary>
+	/// Validates whether the given credit card number is valid.
+	/// </summary>
+	/// <param name="creditCardNumber">The credit card number to validate.</param>
+	/// <returns><c>true</c> if the credit card number is valid; otherwise, <c>false</c>.</returns>
+	/// <remarks>
+	/// <para>The credit card number must not be null, empty, or contain only whitespace characters.</para>
+	/// <para>The method removes any spaces or dashes from the credit card number before validation.</para>
+	/// <para>The credit card number must be numeric and not empty.</para>
+	/// <para>The credit card number must pass the Luhn algorithm (modulus 10 checksum).</para>
+	/// <para>The credit card number must match one of the supported card types: Visa, MasterCard, American Express (Amex), Discover, or Diners Club.</para>
+	/// </remarks>
 	public static bool IsValidCreditCardNumber(string creditCardNumber)
 	{
 		// Remove any spaces or dashes from the credit card number
@@ -45,7 +61,18 @@ public static class CreditCardValidator
 		return true;
 	}
 
+	/// <summary>
+	/// Checks whether the given value is numeric.
+	/// </summary>
+	/// <param name="value">The value to check.</param>
+	/// <returns><c>true</c> if the value is numeric; otherwise, <c>false</c>.</returns>
 	private static bool IsNumeric(string value) => long.TryParse(value, out _);
+
+	/// <summary>
+	/// Validates whether the given credit card number passes the Luhn algorithm (modulus 10 checksum).
+	/// </summary>
+	/// <param name="creditCardNumber">The credit card number to validate.</param>
+	/// <returns><c>true</c> if the credit card number passes the Luhn algorithm; otherwise, <c>false</c>.</returns>
 	private static bool PassesLuhnAlgorithm(string creditCardNumber)
 	{
 		int sum = 0;
@@ -70,6 +97,11 @@ public static class CreditCardValidator
 		return (sum % 10) == 0;
 	}
 
+	/// <summary>
+	/// Validates whether the given credit card number matches a supported card type (Visa, MasterCard, Amex, Discover, or Diners Club).
+	/// </summary>
+	/// <param name="creditCardNumber">The credit card number to validate.</param>
+	/// <returns><c>true</c> if the credit card number matches a supported card type; otherwise, <c>false</c>.</returns>
 	private static bool IsValidCardType(string creditCardNumber)
 	{
 		// Check for Visa

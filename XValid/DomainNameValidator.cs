@@ -24,8 +24,26 @@ SOFTWARE.
 using System.Text.RegularExpressions;
 
 namespace XValid;
+
+/// <summary>
+/// Represents a domain name validator that checks if a domain name is valid and well-formed according to the DNS rules.
+/// </summary>
 public static class DomainNameValidator
 {
+	/// <summary>
+	/// Validates whether the given domain name is valid and well-formed according to the DNS rules.
+	/// </summary>
+	/// <param name="domainName">The domain name to validate.</param>
+	/// <returns><c>true</c> if the domain name is valid and well-formed; otherwise, <c>false</c>.</returns>
+	/// <remarks>
+	/// <para>The domain name must not be null, empty, or contain only whitespace characters.</para>
+	/// <para>The domain name must not exceed 255 characters in overall length.</para>
+	/// <para>The domain name may contain alphanumeric characters, dots, and hyphens.</para>
+	/// <para>The domain name must start and end with alphanumeric characters.</para>
+	/// <para>The domain name must not contain two consecutive dots (..).</para>
+	/// <para>The domain name must not start or end with a dot (.).</para>
+	/// <para>The domain name components (labels) must not exceed 63 characters in length.</para>
+	/// </remarks>
 	public static bool IsValid(string domainName)
 	{
 		if (string.IsNullOrWhiteSpace(domainName))

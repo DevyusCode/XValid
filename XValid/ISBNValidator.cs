@@ -23,8 +23,24 @@ SOFTWARE.
 */
 
 namespace XValid;
+
+/// <summary>
+/// Provides methods to validate ISBNs (International Standard Book Numbers), including checking if they are valid, formatted, and follow the ISBN-10 or ISBN-13 standard.
+/// </summary>
 public static class ISBNValidator
 {
+	/// <summary>
+	/// Validates whether the given ISBN is valid and follows the specified ISBN version (ISBN-10 or ISBN-13).
+	/// </summary>
+	/// <param name="isbn">The ISBN to validate.</param>
+	/// <param name="version">The ISBN version to check (ISBN-10 or ISBN-13).</param>
+	/// <returns><c>true</c> if the ISBN is valid and follows the specified version; otherwise, <c>false</c>.</returns>
+	/// <remarks>
+	/// <para>The ISBN must not be null, empty, or contain only whitespace characters.</para>
+	/// <para>The ISBN must be correctly formatted according to the specified version (ISBN-10 or ISBN-13).</para>
+	/// <para>For ISBN-10, the ISBN must consist of 10 digits (either numeric or with the last character being 'X' for the check digit).</para>
+	/// <para>For ISBN-13, the ISBN must consist of 13 digits (numeric only) and follow the EAN-13 format.</para>
+	/// </remarks>
 	public static bool IsValidISBN(string isbn)
 	{
 		// Remove any spaces or dashes from the ISBN
@@ -47,8 +63,18 @@ public static class ISBNValidator
 		return false;
 	}
 
+	/// <summary>
+	/// Checks if a given string is a numeric value.
+	/// </summary>
+	/// <param name="value">The string to check.</param>
+	/// <returns>True if the string is a numeric value, false otherwise.</returns>
 	private static bool IsNumeric(string value) => long.TryParse(value, out _);
 
+	/// <summary>
+	/// Checks if a given string is a valid ISBN-10 number.
+	/// </summary>
+	/// <param name="isbn">The string to check.</param>
+	/// <returns>True if the string is a valid ISBN-10 number, false otherwise.</returns>
 	public static bool IsValidISBN10(string isbn)
 	{
 		int sum = 0;
@@ -67,6 +93,11 @@ public static class ISBNValidator
 		return (sum % 11) == 0;
 	}
 
+	/// <summary>
+	/// Checks if a given string is a valid ISBN-13 number.
+	/// </summary>
+	/// <param name="isbn">The string to check.</param>
+	/// <returns>True if the string is a valid ISBN-13 number, false otherwise.</returns>
 	public static bool IsValidISBN13(string isbn)
 	{
 		int sum = 0;

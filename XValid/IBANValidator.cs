@@ -24,8 +24,17 @@ SOFTWARE.
 using System.Text.RegularExpressions;
 
 namespace XValid;
+
+/// <summary>
+/// Provides methods to validate International Bank Account Numbers (IBANs).
+/// </summary>
 public static class IBANValidator
 {
+	/// <summary>
+	/// Validates whether the given string is a valid IBAN, formatted correctly, and follows the ISO 13616 standard.
+	/// </summary>
+	/// <param name="iban">The IBAN to be validated.</param>
+	/// <returns><c>true</c> if the IBAN is valid; otherwise, <c>false</c>.</returns>
 	public static bool IsValidIBAN(string iban)
 	{
 		if (string.IsNullOrWhiteSpace(iban))
@@ -71,6 +80,11 @@ public static class IBANValidator
 		return remainder == 1;
 	}
 
+	/// <summary>
+	/// Validates whether the given IBAN has a valid country code according to the ISO 3166-1 alpha-2 standard.
+	/// </summary>
+	/// <param name="iban">The IBAN to be validated.</param>
+	/// <returns><c>true</c> if the country code in the IBAN is valid; otherwise, <c>false</c>.</returns>
 	public static bool IsValidCountryCode(string iban)
 	{
 		if (iban.Length < 2)
