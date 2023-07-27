@@ -13,6 +13,7 @@
     <RepositoryUrl>https://github.com/DevyusCode/XValid</RepositoryUrl>
     <PackageTags>validator;isbn;iban;credit card;coordinate;ip;domain</PackageTags>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
