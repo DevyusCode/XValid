@@ -52,10 +52,7 @@ public static class ISBNValidator
 		return false;
 	}
 
-	private static bool IsNumeric(string value)
-	{
-		return long.TryParse(value, out _);
-	}
+	private static bool IsNumeric(string value) => long.TryParse(value, out _);
 
 	public static bool IsValidISBN10(string isbn)
 	{

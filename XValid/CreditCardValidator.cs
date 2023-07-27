@@ -50,10 +50,7 @@ public static class CreditCardValidator
 		return true;
 	}
 
-	private static bool IsNumeric(string value)
-	{
-		return long.TryParse(value, out _);
-	}
+	private static bool IsNumeric(string value) => long.TryParse(value, out _);
 	private static bool PassesLuhnAlgorithm(string creditCardNumber)
 	{
 		int sum = 0;
