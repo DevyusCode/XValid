@@ -1,0 +1,84 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace XValid;
+public static class CreditCardValidator
+{
+	public static bool IsValidCreditCardNumber(string creditCardNumber)
+	{
+		// Remove any spaces or dashes from the credit card number
+		creditCardNumber = creditCardNumber.Replace(" ", "").Replace("-", "");
+
+		// Check if the credit card number is numeric and not empty
+		if (!IsNumeric(creditCardNumber) || string.IsNullOrWhiteSpace(creditCardNumber))
+			return false;
+
+		// Check if the credit card number passes the Luhn algorithm
+		if (!PassesLuhnAlgorithm(creditCardNumber))
+			return false;
+
+		// Check if the credit card number matches a supported type
+		if (!IsValidCardType(creditCardNumber))
+			return false;
+
+		return true;
+	}
+
+	private static bool IsNumeric(string value)
+	{
+		return long.TryParse(value, out _);
+	}
+	private static bool PassesLuhnAlgorithm(string creditCardNumber)
+	{
+		int sum = 0;
+		bool isAlternate = false;
+
+		// Start from the rightmost digit and work towards the left
+		for (int i = creditCardNumber.Length - 1; i >= 0; i--)
+		{
+			int digit = int.Parse(creditCardNumber[i].ToString());
+
+			if (isAlternate)
+			{
+				digit *= 2;
+				if (digit > 9)
+					digit -= 9;
+			}
+
+			sum += digit;
+			isAlternate = !isAlternate;
+		}
+
+		return (sum % 10) == 0;
+	}
+
+	private static bool IsValidCardType(string creditCardNumber)
+	{
+		// Check for Visa
+		if (creditCardNumber.StartsWith("4") && (creditCardNumber.Length == 13 || creditCardNumber.Length == 16))
+			return true;
+
+		// Check for MasterCard
+		if (creditCardNumber.StartsWith("5") && creditCardNumber.Length == 16 && IsNumeric(creditCardNumber))
+			return true;
+
+		// Check for American Express (Amex)
+		if (creditCardNumber.StartsWith("3") && (creditCardNumber.Length == 15) && IsNumeric(creditCardNumber))
+			return true;
+
+		// Check for Discover
+		if ((creditCardNumber.StartsWith("6011") || creditCardNumber.StartsWith("65")) && (creditCardNumber.Length == 16) && IsNumeric(creditCardNumber))
+			return true;
+
+		// Check for Diners Club
+		if ((creditCardNumber.StartsWith("300") || creditCardNumber.StartsWith("301") || creditCardNumber.StartsWith("302") ||
+			creditCardNumber.StartsWith("303") || creditCardNumber.StartsWith("304") || creditCardNumber.StartsWith("305") ||
+			creditCardNumber.StartsWith("36") || creditCardNumber.StartsWith("38")) && (creditCardNumber.Length == 14) && IsNumeric(creditCardNumber))
+			return true;
+
+		return false;
+	}
+}
