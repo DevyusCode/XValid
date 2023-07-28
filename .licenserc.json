@@ -1,0 +1,4 @@
+{
+  "**/*.cs": ["/*", "MIT License", "", "Copyright (c) Devyus"],
+  "ignore": ["**/*.Designer.cs", "XValid/Properties/", "XValid/obj/"]
+}
