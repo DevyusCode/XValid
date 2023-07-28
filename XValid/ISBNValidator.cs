@@ -33,7 +33,6 @@ public static class ISBNValidator
 	/// Validates whether the given ISBN is valid and follows the specified ISBN version (ISBN-10 or ISBN-13).
 	/// </summary>
 	/// <param name="isbn">The ISBN to validate.</param>
-	/// <param name="version">The ISBN version to check (ISBN-10 or ISBN-13).</param>
 	/// <returns><c>true</c> if the ISBN is valid and follows the specified version; otherwise, <c>false</c>.</returns>
 	/// <remarks>
 	/// <para>The ISBN must not be null, empty, or contain only whitespace characters.</para>
