@@ -71,6 +71,8 @@ public static class DomainNameValidator
 		if (domainName.StartsWith(".") || domainName.EndsWith("."))
 			return false;
 
+		if (domainName.StartsWith("-") || domainName.EndsWith("-") || domainName.Split(".")[^2].EndsWith("-")) return false;
+
 		// Check if the domain name components (labels) are valid in length
 		string[] domainComponents = domainName.Split('.');
 		foreach (string component in domainComponents)
