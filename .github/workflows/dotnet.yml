@@ -1,0 +1,26 @@
+name: .NET CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        dotnet: ["6.0.x", "7.0.x"]
+        os: ["ubuntu-latest", "windows-latest"]
+    runs-on: ${{ matrix.os }}
+    name: .NET ${{ matrix.dotnet }} on ${{ matrix.os }} sample
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: ${{ matrix.dotnet }}
+
+      - name: Build XValid
+        run: dotnet build XValid/XValid.csproj -c Release
+
+      - name: Test XValid
+        run: dotnet test
