@@ -22,10 +22,22 @@ export default defineConfig({
     },
     sidebar: [
       {
-        text: "Examples",
+        text: "Start",
         items: [
-          { text: "Markdown Examples", link: "/markdown-examples" },
-          { text: "Runtime API Examples", link: "/api-examples" },
+          { text: "Home", link: "/" },
+          { text: "Getting Started", link: "/get-started" },
+          { text: "Contribute", link: "/contribute" },
+        ],
+      },
+      {
+        text: "API Reference",
+        items: [
+          { text: "EmailValidator", link: "/api/email-validator" },
+          { text: "ISBNValidator", link: "/api/isbn-validator" },
+          { text: "IBANValidator", link: "/api/iban-validator" },
+          { text: "CreditCardValidator", link: "/api/credit-card-validator" },
+          { text: "IPAddressValidator", link: "/api/ip-address-validator" },
+          { text: "CoordinateValidator", link: "/api/coordinate-validator" },
         ],
       },
     ],
