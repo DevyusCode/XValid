@@ -4,7 +4,6 @@
 ![GitHub issues](https://img.shields.io/github/issues/DevuysCode/XValid)
 ![GitHub](https://img.shields.io/github/license/DevuysCode/XValid)
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/DevuysCode/XValid/dotnet.yml?branch=main)
-![Using PeyrSharp](https://img.shields.io/badge/using-PeyrSharp-DD00FF?logo=nuget)
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/DevuysCode/XValid)
 
 <br />
