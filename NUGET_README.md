@@ -1,14 +1,14 @@
-![GitHub contributors](https://img.shields.io/github/contributors/DevuysCode/XValid)
-![GitHub issues](https://img.shields.io/github/issues/DevuysCode/XValid)
-![GitHub](https://img.shields.io/github/license/DevuysCode/XValid)
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/DevuysCode/XValid/dotnet.yml?branch=main)
-![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/DevuysCode/XValid)
+![GitHub contributors](https://img.shields.io/github/contributors/DevyusCode/XValid)
+![GitHub issues](https://img.shields.io/github/issues/DevyusCode/XValid)
+![GitHub](https://img.shields.io/github/license/DevyusCode/XValid)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/DevyusCode/XValid/dotnet.yml?branch=main)
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/DevyusCode/XValid)
 
 # XValid - A Simple Validator Library
 
 A simple validator library for various things, such as coordinates, credit cards, domain names, emails, IBANs, IP addresses, ISBNs, and more.
 
-[View documentation »](https://dev.peyronnet.group/xvalid/) · [Report Bug](https://github.com/DevuysCode/XValid/issues/new?assignees=&labels=bug&template=bug-report.yml&title=%5BBug%5D+) · [Request Feature](https://github.com/DevuysCode/XValid/issues/new?assignees=&labels=enhancement&template=feature-request.yml&title=%5BEnhancement%5D+)
+[View documentation »](https://dev.peyronnet.group/xvalid/) · [Report Bug](https://github.com/DevyusCode/XValid/issues/new?assignees=&labels=bug&template=bug-report.yml&title=%5BBug%5D+) · [Request Feature](https://github.com/DevyusCode/XValid/issues/new?assignees=&labels=enhancement&template=feature-request.yml&title=%5BEnhancement%5D+)
 
 ## Features
 

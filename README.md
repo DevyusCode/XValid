@@ -1,15 +1,15 @@
 # XValid - A Simple Validator Library
 
-![GitHub contributors](https://img.shields.io/github/contributors/DevuysCode/XValid)
-![GitHub issues](https://img.shields.io/github/issues/DevuysCode/XValid)
-![GitHub](https://img.shields.io/github/license/DevuysCode/XValid)
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/DevuysCode/XValid/dotnet.yml?branch=main)
-![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/DevuysCode/XValid)
+![GitHub contributors](https://img.shields.io/github/contributors/DevyusCode/XValid)
+![GitHub issues](https://img.shields.io/github/issues/DevyusCode/XValid)
+![GitHub](https://img.shields.io/github/license/DevyusCode/XValid)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/DevyusCode/XValid/dotnet.yml?branch=main)
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/DevyusCode/XValid)
 
 <br />
 <br />
 <p align="center">
-  <a href="https://github.com/DevuysCode/XValid">
+  <a href="https://github.com/DevyusCode/XValid">
     <img src=".github/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -20,11 +20,11 @@
     <br />
     <a href="https://dev.peyronnet.group/xvalid/"><strong>View documentation »</strong></a>
     <br />
-    <a href="https://github.com/DevuysCode/XValid/issues/new?assignees=&labels=bug&template=bug-report.yml&title=%5BBug%5D+">Report Bug</a>
+    <a href="https://github.com/DevyusCode/XValid/issues/new?assignees=&labels=bug&template=bug-report.yml&title=%5BBug%5D+">Report Bug</a>
     ·
-    <a href="https://github.com/DevuysCode/XValid/issues/new?assignees=&labels=enhancement&template=feature-request.yml&title=%5BEnhancement%5D+">Request Feature</a>
+    <a href="https://github.com/DevyusCode/XValid/issues/new?assignees=&labels=enhancement&template=feature-request.yml&title=%5BEnhancement%5D+">Request Feature</a>
     ·
-    <a href="https://github.com/DevuysCode/XValid/issues?q=is%3Aopen+is%3Aissue+label%3Abug">Known Issues</a>
+    <a href="https://github.com/DevyusCode/XValid/issues?q=is%3Aopen+is%3Aissue+label%3Abug">Known Issues</a>
   </p>
 </p>
 
