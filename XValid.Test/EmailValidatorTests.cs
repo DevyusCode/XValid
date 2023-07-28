@@ -46,6 +46,6 @@ public class EmailValidatorTests
 	[TestCase(null, ExpectedResult = false)] // Null string
 	public bool TestValidateEmail(string email)
 	{
-		return EmailValidator.ValidateEmail(email);
+		return EmailValidator.IsValidEmail(email);
 	}
 }

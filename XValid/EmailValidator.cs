@@ -47,7 +47,7 @@ public static class EmailValidator
 	/// and hyphens in the local part. The domain part is allowed to contain alphanumeric characters, dots, and hyphens,
 	/// with at least two letters at the end.
 	/// </remarks>
-	public static bool ValidateEmail(string email)
+	public static bool IsValidEmail(string email)
 	{
 		if (string.IsNullOrWhiteSpace(email))
 			return false;
