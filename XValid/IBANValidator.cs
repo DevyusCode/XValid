@@ -90,7 +90,7 @@ public static class IBANValidator
 		if (iban.Length < 2)
 			return false;
 
-		string countryCode = iban.Substring(0, 2);
+		string countryCode = iban[..2];
 
 		// Implement a list of valid country codes based on ISO 3166-1 alpha-2 standard
 		string[] validCountryCodes = new string[]
@@ -105,6 +105,6 @@ public static class IBANValidator
 			"UA", "AE", "GB", "VA", "VG"
 		};
 
-		return Array.Exists(validCountryCodes, code => code == countryCode);
+		return validCountryCodes.Contains(countryCode);
 	}
 }
