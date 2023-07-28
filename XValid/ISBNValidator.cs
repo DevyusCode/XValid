@@ -43,6 +43,8 @@ public static class ISBNValidator
 	/// </remarks>
 	public static bool IsValidISBN(string isbn)
 	{
+		if (isbn is null) return false;
+
 		// Remove any spaces or dashes from the ISBN
 		isbn = isbn.Replace(" ", "").Replace("-", "");
 
@@ -77,6 +79,10 @@ public static class ISBNValidator
 	/// <returns>True if the string is a valid ISBN-10 number, false otherwise.</returns>
 	public static bool IsValidISBN10(string isbn)
 	{
+		if (isbn is null || string.IsNullOrEmpty(isbn) || string.IsNullOrWhiteSpace(isbn)) return false;
+		isbn = isbn.Replace(" ", "").Replace("-", "");
+		if (isbn.Length != 10) return false;
+
 		int sum = 0;
 		for (int i = 0; i < 9; i++)
 		{
@@ -100,6 +106,10 @@ public static class ISBNValidator
 	/// <returns>True if the string is a valid ISBN-13 number, false otherwise.</returns>
 	public static bool IsValidISBN13(string isbn)
 	{
+		if (isbn is null || string.IsNullOrEmpty(isbn) || string.IsNullOrWhiteSpace(isbn)) return false;
+		isbn = isbn.Replace(" ", "").Replace("-", "");
+		if (isbn.Length != 13) return false;
+
 		int sum = 0;
 		for (int i = 0; i < 12; i++)
 		{
