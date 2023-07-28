@@ -117,4 +117,4 @@ else
 }
 ```
 
-That's it! You can use the `ISBNValidator` class in your C# code to validate ISBNs and ensure they are correctly formatted according to the ISBN-10 or ISBN-13 standard. If you have any questions or need more information, feel free to explore other sections of the API reference or check out the [Get Started](/getting-started) page for an overview of XValid.
+That's it! You can use the `ISBNValidator` class in your C# code to validate ISBNs and ensure they are correctly formatted according to the ISBN-10 or ISBN-13 standard. If you have any questions or need more information, feel free to explore other sections of the API reference or check out the [Get Started](/get-started) page for an overview of XValid.
