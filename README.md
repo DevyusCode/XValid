@@ -18,6 +18,8 @@
   <p align="center">
     A simple validator library for various things, such as coordinates, credit cards, domain names, emails, IBANs, IP addresses, ISBNs, and more.
     <br />
+    <a href="https://dev.peyronnet.group/xvalid/"><strong>View documentation »</strong></a>
+    <br />
     <a href="https://github.com/DevuysCode/XValid/issues/new?assignees=&labels=bug&template=bug-report.yml&title=%5BBug%5D+">Report Bug</a>
     ·
     <a href="https://github.com/DevuysCode/XValid/issues/new?assignees=&labels=enhancement&template=feature-request.yml&title=%5BEnhancement%5D+">Request Feature</a>
