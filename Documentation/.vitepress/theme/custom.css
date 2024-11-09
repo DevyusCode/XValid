@@ -17,6 +17,8 @@ html.dark {
 
   /* background colors */
   --vp-c-bg: #0a0a1e;
+  --vp-sidebar-bg-color: #141428;
+  --vp-code-block-bg: #141428;
   --vp-c-bg-light: #141428;
   --vp-c-bg-lighter: #1e1e32;
   --vp-code-bg-color: #1e1e32;
